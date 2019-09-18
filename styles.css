@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+body{
+  background: #172a4b;
+}
+.wrapper{
+  margin: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 20px;
+  color: #333333;
+}
+.wrapper .table_title{
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 3px;
+}
+
+.wrapper .table_header{
+  color: #a1a1a1;
+}
+
+.wrapper .table_header .item_wrap{
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.wrapper .item_wrap{
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+
+.wrapper .table_body .item_wrap:last-child{
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.wrapper .table_body .item_wrap{
+  cursor: pointer;
+}
+
+.wrapper .table_body .item_wrap:hover{
+  background: #eaeff9;
+}
+
+.wrapper .item_wrap .item.item_id,
+.wrapper .item_wrap .item.item_cost{
+  width: 12%;
+}
+
+.wrapper .item_wrap .item{
+  width: 18%;
+}
+
+.wrapper .item_wrap .item.item_order{
+  width: 28%;
+}
+
+.wrapper .item_wrap .item.item_id{
+  display: flex;
+}
+
+.wrapper .item_wrap .item.item_cost .cost_wrap{
+  display: flex;
+  width: 40px;
+  justify-content: space-between;
+}
+
+.wrapper .item_wrap .item .checkbox{
+  display: block;
+  border: 1px solid #e0e0e0;
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.wrapper .item_wrap .item .checkbox .input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.wrapper .item_wrap .item .checkbox .mark {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border: 1px solid #172a4b;
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+  display: none;
+}
+
+.wrapper .item_wrap .item .checkbox .mark:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 5px;
+  height: 3px;
+  border: 2px solid #172a4b;
+  border-top: 0px;
+  border-right: 0px;
+  transform: rotate(-45deg)
+}
+
+.wrapper .item_wrap .item .checkbox .input:checked ~ .mark {
+  display: block;
+}
+
+.wrapper .item_wrap .item.item_status  span{
+  background: #cbe4f8;
+  padding: 3px 10px;
+}
+
+.wrapper .item_wrap .item_status.process  span{
+  color: #0477ca;
+}
+.wrapper .item_wrap .item_status.error  span{
+  color: #e65655;
+}
+.wrapper .item_wrap .item_status.delivered  span{
+  color: #3a9d89;
+}
+.wrapper .item_wrap .item_status.shipping  span{
+  color: #ec7519;
+}
+
+.wrapper .item_wrap .item.item_name p,
+.wrapper .item_wrap .item.item_order p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wrapper .item_wrap .item .checkbox_wrap{
+  width: 15px;
+  margin-right: 5px;
+}
+
+@media (max-width: 600px){
+  .wrapper .item_wrap .item{
+    width: 25%;
+  }
+  .wrapper .item_wrap .item.item_order{
+    display: none;
+  }
+}
+
+@media (max-width: 450px){
+  .wrapper .item_wrap .item{
+    width: 33%;
+  }
+  .wrapper .item_wrap .item.item_cost{
+    display: none;
+  }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Custom Table</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".table_body .checkbox .input").click(function(){
+			  if($(this).is(":checked")){
+			    var item_num = $(this).attr("value");
+			    $("."+item_num).parent().css("background", "#eaeff9");
+			  }
+			  else{
+			    var item_num = $(this).attr("value");
+			    $("."+item_num).parent().css("background", "#fff");
+			  }
+			})
+
+			$(".table_header .checkbox .input").click(function(){
+			  if($(this).is(":checked")){
+			    $('.checkbox .input').prop('checked', true);
+			    $(".table_body .item_wrap").css("background", "#eaeff9");
+			  }
+			  else{
+			    $('.checkbox .input').prop('checked', false);
+			    $(".table_body .item_wrap").css("background", "#fff");
+			  }
+			})
+
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="table_title">
+    Responsive Custom Table
+  </div>
+  
+  <div class="table_wrap">
+    <div class="table_header">
+      <div class="item_wrap">
+        <div class="item item_id">
+           <div class="checkbox_wrap">
+             <label class="checkbox">
+              <input type="checkbox" class="input">
+              <span class="mark"></span>
+           </label>
+          </div>ID
+        </div>
+        <div class="item item_name">
+           Name
+        </div>
+        <div class="item item_status">
+           Status
+        </div>
+        <div class="item item_order">
+           Ordered
+        </div>
+        <div class="item item_cost">
+           Cost
+        </div>
+      </div>
+    </div>
+    <div class="table_body">
+      <div class="item_wrap">
+        <div class="item item_id item_id_1">
+          <div class="checkbox_wrap">
+             <label class="checkbox">
+              <input type="checkbox" class="input" value="item_id_1">
+              <span class="mark"></span>
+           </label>
+          </div><p>121</p>
+        </div>
+        <div class="item item_name">
+           <p>John Alex</p>
+        </div>
+        <div class="item item_status process">
+            <span>Processing</span>
+        </div>
+        <div class="item item_order">
+           <p>04-21-2019 07:30 AM</p>
+        </div>
+        <div class="item item_cost">
+           <div class="cost_wrap">
+            <div class="num">9</div>
+            <div class="format">$</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="item_wrap">
+        <div class="item item_id item_id_2">
+           <div class="checkbox_wrap">
+             <label class="checkbox">
+              <input type="checkbox" class="input" value="item_id_2">
+              <span class="mark"></span>
+           </label>
+          </div><p>2231</p>
+        </div>
+        <div class="item item_name">
+           <p>Peter</p>
+        </div>
+        <div class="item item_status error">
+            <span>Error</span>
+        </div>
+        <div class="item item_order">
+           <p>02-18-2019 12:30 PM</p>
+        </div>
+        <div class="item item_cost">
+           <div class="cost_wrap">
+            <div class="num">65</div>
+            <div class="format">$</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="item_wrap">
+        <div class="item item_id item_id_3">
+           <div class="checkbox_wrap">
+             <label class="checkbox">
+              <input type="checkbox" class="input" value="item_id_3">
+              <span class="mark"></span>
+           </label>
+          </div><p>467</p>
+        </div>
+        <div class="item item_name">
+           <p>Michael Bevan </p>
+        </div>
+        <div class="item item_status shipping">
+            <span>Shipping</span>
+        </div>
+        <div class="item item_order">
+           <p>08-15-2019 03:17 PM</p>
+        </div>
+        <div class="item item_cost">
+          <div class="cost_wrap">
+            <div class="num">1215</div>
+            <div class="format">$</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="item_wrap">
+        <div class="item item_id item_id_4">
+           <div class="checkbox_wrap">
+             <label class="checkbox">
+              <input type="checkbox" class="input" value="item_id_4">
+              <span class="mark"></span>
+           </label>
+          </div><p>467</p>
+        </div>
+        <div class="item item_name">
+           <p>Amy Hobson</p>
+        </div>
+        <div class="item item_status delivered">
+            <span>Delivered</span>
+        </div>
+        <div class="item item_order">
+           <p>08-15-2019 03:17 PM</p>
+        </div>
+        <div class="item item_cost">
+          <div class="cost_wrap">
+            <div class="num">515</div>
+            <div class="format">$</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="item_wrap">
+        <div class="item item_id item_id_5">
+          <div class="checkbox_wrap">
+             <label class="checkbox">
+              <input type="checkbox" class="input" value="item_id_5">
+              <span class="mark"></span>
+           </label>
+          </div><p>121</p>
+        </div>
+        <div class="item item_name">
+           <p>John Alex</p>
+        </div>
+        <div class="item item_status process">
+            <span>Processing</span>
+        </div>
+        <div class="item item_order">
+           <p>04-21-2019 07:30 AM</p>
+        </div>
+        <div class="item item_cost">
+           <div class="cost_wrap">
+            <div class="num">9</div>
+            <div class="format">$</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="item_wrap">
+        <div class="item item_id item_id_6">
+           <div class="checkbox_wrap">
+             <label class="checkbox">
+              <input type="checkbox" class="input" value="item_id_6">
+              <span class="mark"></span>
+           </label>
+          </div><p>467</p>
+        </div>
+        <div class="item item_name">
+           <p>Michael Bevan </p>
+        </div>
+        <div class="item item_status shipping">
+            <span>Shipping</span>
+        </div>
+        <div class="item item_order">
+           <p>08-15-2019 03:17 PM</p>
+        </div>
+        <div class="item item_cost">
+          <div class="cost_wrap">
+            <div class="num">1215</div>
+            <div class="format">$</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
