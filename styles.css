@@ -57,7 +57,7 @@ body{
 }
 
 .wrapper .table_body .item_wrap:hover{
-  background: #eaeff9;
+  background: #eaeff9 !important;
 }
 
 .wrapper .item_wrap .item.item_id,
